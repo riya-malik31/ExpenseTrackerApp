@@ -7,11 +7,10 @@ const app = express();
 app.use(express.json())
 app.use(cors());
 // const uri = "mongodb://0.0.0.0:27017";
-const uri= "mongodb+srv://riyacws123:t5ykuujYGJWmgU5g@cluster0.nsec2.mongodb.net/Users?retryWrites=true&w=majority";
+const uri= "mongodb+srv://riyacws123:t5ykuujYGJWmgU5g@cluster0.nsec2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const port = process.env.PORT || 5000
 app.use(bodyParser.json());
 let client;
-
 async function connectToMongo() {
   try {
     client = new MongoClient(uri);
