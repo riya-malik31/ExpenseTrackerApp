@@ -16,8 +16,8 @@ const Dashboard = () => {
 
   const fetchData = async () => {
     try {
-      const incomeResponse = await fetch(`http://localhost:5000/get-income/${userId}`);
-      const expenseResponse = await fetch(`http://localhost:5000/get-expenses/${userId}`);
+      const incomeResponse = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/get-income/${userId}`);
+      const expenseResponse = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/get-expenses/${userId}`);
 
       const incomeData = await incomeResponse.json();
       const expenseData = await expenseResponse.json();
