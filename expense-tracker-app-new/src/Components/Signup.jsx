@@ -13,7 +13,7 @@ function Signup() {
   event.preventDefault();
 
   try {
-    const response = await axios.post("http://localhost:5000/signup", inputs);
+    const response = await axios.post("https://expense-tracker-app-backend-steel.vercel.app/signup", inputs);
     alert(response.data.message); 
     navigate("/Login")
   } catch (error) {
