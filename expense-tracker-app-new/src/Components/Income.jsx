@@ -20,7 +20,7 @@ const Income = () => {
 
   const fetchTotalIncome = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/get-income/${userId}`);
+      const response = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/get-income/${userId}`);
       const data = await response.json();
 
       if (response.ok) {
@@ -49,7 +49,7 @@ const Income = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/add-income", {
+      const response = await fetch("https://expense-tracker-app-backend-steel.vercel.app/add-income", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...incomeData, userId }),
@@ -71,7 +71,7 @@ const Income = () => {
   };
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/delete-income/${id}`, {
+      const response = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/delete-income/${id}`, {
         method: 'DELETE',
       });
 
