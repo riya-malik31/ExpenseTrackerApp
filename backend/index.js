@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const app = express();
 app.use(express.json())
 // Allow requests from your Vercel frontend
-const allowedOrigins = ['https://expense-tracker-app-frontend-taupe.vercel.app'];
+const allowedOrigins = ['https://expense-tracker-app-frontend-taupe.vercel.app/'];
 app.use(cors({
   origin: allowedOrigins,
   credentials: true
