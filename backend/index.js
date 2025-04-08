@@ -5,8 +5,12 @@ const { MongoClient, ObjectId } = require('mongodb');
 const bcrypt = require('bcrypt');
 const app = express();
 app.use(express.json())
-app.use(cors());
-// const uri = "mongodb://0.0.0.0:27017";
+// Allow requests from your Vercel frontend
+const allowedOrigins = ['https://expense-tracker-app-frontend-taupe.vercel.app'];
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 const uri= "mongodb+srv://riyacws123:t5ykuujYGJWmgU5g@cluster0.nsec2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const port = process.env.PORT || 5000
 app.use(bodyParser.json());
