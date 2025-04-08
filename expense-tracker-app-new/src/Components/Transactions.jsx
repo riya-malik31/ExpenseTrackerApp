@@ -14,8 +14,8 @@ const Transactions = () => {
   const fetchTransactions = async () => {
     try {
       // Fetch both income and expenses
-      const incomeRes = await fetch(`http://localhost:5000/get-income/${userId}`);
-      const expenseRes = await fetch(`http://localhost:5000/get-expenses/${userId}`);
+      const incomeRes = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/get-income/${userId}`);
+      const expenseRes = await fetch(`https://expense-tracker-app-backend-steel.vercel.app/get-expenses/${userId}`);
 
       const incomeData = await incomeRes.json();
       const expenseData = await expenseRes.json();
